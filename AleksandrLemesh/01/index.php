@@ -1,4 +1,7 @@
-<?php
+﻿<?php
+
+
+
 echo "Hello world <hr>";
 ?>
 
@@ -239,5 +242,4 @@ echo'<hr>';
 		var_dump($arNum);
 echo "</pre>";
 echo '<hr>';
-
 ?>
