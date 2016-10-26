@@ -179,15 +179,30 @@ $col = [1,2,4,4,2,5];
 echo "shestoe Шестое задание
 Дан массив размера n. После каждого отрицательного элемента массива вставить
 элемент с нулевым значением.<br>";
-	unset ($m, $k, $i);
+
+	$length = mt_rand(1, 10);//Создаем уникальный маасив
+        $array = [];
+       for ($i = 0; $i < $length; $i++) {
+            $array[$i] = mt_rand(-10, 10);
+        }
+        for ($i = 0; $i < count($array); $i++) {
+            if ($array[$i] < 0) {
+                $array[$i] = 0;
+            }
+        }
+        echo "<pre>";
+        var_dump($array);
+        echo"</pre>";
+	
+	/*unset ($m, $k, $i);
 	echo "<pre>";
-	/*$max = 5;// любое число
+	$max = 5;// любое число
 	$min = -5;
 	$k = [];
 	$k=range($min,$max,2);
 		print_r($k);
 			$new_k = implode(' ', $k);
-			echo $new_k;*/
+			echo $new_k;
 			
 		$max = 5;
 		$min = -5;
@@ -200,7 +215,7 @@ echo "shestoe Шестое задание
 		print_r($k);
 					
 					
-	echo "</pre>";
+	echo "</pre>";*/
 	
 	
 	
