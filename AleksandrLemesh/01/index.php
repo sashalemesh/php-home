@@ -1,7 +1,4 @@
 ﻿<?php
-
-
-
 echo "Hello world <hr>";
 ?>
 
@@ -182,46 +179,34 @@ $col = [1,2,4,4,2,5];
 echo "shestoe Шестое задание
 Дан массив размера n. После каждого отрицательного элемента массива вставить
 элемент с нулевым значением.<br>";
+		
 
-	$length = mt_rand(1, 10);//Создаем уникальный маасив
-        $array = [];
-       for ($i = 0; $i < $length; $i++) {
-            $array[$i] = mt_rand(-10, 10);
-        }
-        for ($i = 0; $i < count($array); $i++) {
-            if ($array[$i] < 0) {
-                $array[$i] = 0;
-            }
-        }
-        echo "<pre>";
-        var_dump($array);
-        echo"</pre>";
+
 	
-	/*unset ($m, $k, $i);
-	echo "<pre>";
-	$max = 5;// любое число
-	$min = -5;
-	$k = [];
-	$k=range($min,$max,2);
-		print_r($k);
-			$new_k = implode(' ', $k);
-			echo $new_k;
-			
-		$max = 5;
-		$min = -5;
-		$k = [];
-		for($q=$min, $i=1; $q<=$max, $i<=$max; $q++, $i++){	//НЕ ПОЛУЧАЕТСЯ СДЕЛАТЬ!!!!					
-				$k[] = $q;
-				$k[] = 0;
-				$k[] =$i;
-		}
-		print_r($k);
-					
-					
-	echo "</pre>";*/
+		
+		$n = 10;
+	$arNum = [];
+	for($i = 0; $i < $n; $i++){
+		$arNum[] = rand(-10,10);							
+		sort($arNum);
+		$arNum = array_unique($arNum);
+	}
 	
-	
-	
+						$arr = $arNum;
+						foreach ($arr as $v)
+						{
+							if ($v < 0)
+							{
+								$newarr[] = $v;
+								$newarr[] = 0;
+							} else
+							{
+								$newarr[] = $v;
+							}
+						}
+						echo "<pre>";
+						var_dump($newarr);
+						echo"</pre>";
 
 echo'<hr>';
 	/*Задание с повышенной сложностью
