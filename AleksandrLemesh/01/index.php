@@ -221,10 +221,37 @@ echo'<hr>';
 	$n = 10;
 	$arNum = [];
 	for($i = 0; $i < $n; $i++){
-		$arNum[] = rand(1,100);							//СДЕЛАТЬ ВТОРЫМ СПОСОБОМ!!!!
+		$arNum[] = rand(1,100);							
 		sort($arNum);
 	}	
+	
 		var_dump($arNum);
 echo "</pre>";
 echo '<hr>';
+	
+	echo "Второй способ:";
+	
+		$n = 10;
+        $array = [];
+        for ($i = 0; $i < $n; $i++) {
+            $array[$i] = mt_rand(1, 100);
+        }
+        $memory = 0;
+        $check = true;
+        while ($check) {
+            $check = false;
+            for ($i = 0; $i < count($array) - 1; $i++) {
+                if ($array[$i] > $array[$i + 1]) {
+                    $memory = $array[$i + 1];
+                    $array[$i + 1] = $array[$i];
+                    $array[$i] = $memory;
+                    $check = true;
+                }
+            }
+        }
+        echo "<pre>";
+        var_dump($array);
+        echo"</pre>";
+        echo"<hr>";
+        
 ?>
